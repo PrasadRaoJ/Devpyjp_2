@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+
+
+    <h1> Hello world..!</h1>
+
+    {% for article in data %}
+
+    <h1>{{article.title}}</h1>
+    <i>{{article.created_at}}</i>
+    <img src="{{article.img.url}}">
+    <p>{{article.description}}</p>
+      
+    {% endfor %}
+    
+</body>
+</html>
